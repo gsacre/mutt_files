@@ -1,0 +1,11 @@
+# $Id: hooks,v 1.7 2000/12/31 17:10:08 seymour Exp $
+#
+## Hooks
+
+# Collapse threads by default, and jump to the last message
+#folder-hook . push "<collapse-all>*"
+
+# Display sent-mail folders differently
+folder-hook sent-mail 'set index_format="%2N %3C %Z %[%b %d %H:%M] - %-22.22t (%3l) %s"'
+
+send-hook       .       'my_hdr Reply-To: Gregory SACRE <gsa@softkinetic.com>'

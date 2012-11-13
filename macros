@@ -1,0 +1,39 @@
+# $Id: macros,v 1.9 2001/03/14 21:59:50 seymour Exp $
+# vim:ft=muttrc
+#
+# Macros
+macro index l "g?\t" "folder list" # Shows folder list
+macro pager l "g?\t" "folder list" # Shows folder list
+macro browser c "qm" "compose mail" # To compse new mail from the browser
+macro index S "as" "save tagged messages" # Saves tagged messages
+macro pager P "!gpg --keyserver wwwkeys.us.pgp.net --recv-key 0x" "Get PGP Key"
+macro pager L "!gpg --lsign-key 0x" "Sign PGP Key"
+
+macro index \ee ":source ~/.muttrc\n" "\"ESC e\" reloads the muttrc"
+macro pager \ee ":source ~/.muttrc\n" "\"ESC e\" reloads the muttrc"
+macro index <F5> ":source ~/.muttrc\n" "Reload the muttrc"
+macro pager <F5> ":source ~/.muttrc\n" "Reload the muttrc"
+
+macro index \cx "!get_mails\n" "Check for new mail"
+macro pager \cx "!get_mails\n" "Check for new mail"
+
+macro pager d <exit><delete-message>
+
+macro index \Ci "<change-folder> !<enter>" "Go to =INBOX"
+macro index \Cn "<save-message>=next<enter>" "Save message to Next"
+macro pager \Cn "<save-message>=next<enter>" "Save message to Next"
+macro index \Cf "<save-message>=follow_up<enter>" "Save message to Hold"
+macro pager \Cf "<save-message>=follow_up<enter>" "Save message to Hold"
+
+macro index \Ca "<save-message>=archive<enter>" "Archive messages (if any) to =99-Archive/2012"
+macro pager \Ca "<save-message>=archive<enter>" "Archive messages (if any) to =99-Archive/2012"
+
+macro attach \Cr "|~/bin/mutt-ical.py -i -e gsa@softkinetic.com" "Accept meeting request"
+
+# 'L' performs a notmuch query, showing only the results
+macro index <F8> "<enter-command>unset wait_key<enter><shell-escape>read -p 'notmuch query: ' x; echo \$x >~/.cache/mutt_terms<enter><limit>~i \"\`notmuch search --output=messages \$(cat ~/.cache/mutt_terms) | head -n 600 | perl -le '@a=<>;chomp@a;s/\^id:// for@a;$,=\"|\";print@a'\`\"<enter>" "show only messages matching a notmuch pattern"
+
+macro index <F9> "<limit>all\n" "show all messages (undo limit)"
+
+# Add a mail as a task
+macro index t "<pipe-message>mutt2task<enter><pipe-message>mess2task<enter>"

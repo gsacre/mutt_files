@@ -1,0 +1,60 @@
+# $Id: settings,v 1.14 2000/12/16 18:46:23 seymour Exp $
+#
+set folder=~/Maildir
+set pager_index_lines=8        # use this for a split screen
+set signature=~/.signature		# static signature
+set mailcap_sanitize=yes
+set maildir_header_cache_verify=yes
+# To improve performances
+set header_cache="~/.mutt/headercache"
+set read_inc=1000
+
+set markers=no
+
+set sort_browser=alpha
+set nosave_name
+set nomove
+set sleep_time=0
+set status_on_top
+set reverse_name=yes
+set quote_regexp="^([ \t]*[|>:%}#])+"
+set editor='vim + -c "set textwidth=72" -c "set wrap" -c "set nocp" -c "let mutt_mode=1" -c "set spell spelllang=en,fr"
+set delete=yes
+set envelope_from
+set mbox_type="Maildir"
+
+# To query and add email adresses
+set query_command="lbdbq '%s'"	# Requires lbdb: http://www.spinnaker.de/lbdb
+macro generic,index,pager \ca "<shell-escape>abook<return>" "launch abook"
+
+set abort_unmodified="no"
+set abort_nosubject="no"
+set mime_forward="yes"
+set mime_forward_rest="yes"
+set edit_headers
+set pager_stop
+#set sendmail_wait="-1"	# send mail in the background
+set hidden_host
+set timeout=30	# Check for new mail every 30 seconds
+set from="gsa@softkinetic.com"
+set realname="Gregory SACRE"
+
+# Sidebar patch
+#set sidebar_width=25
+#set sidebar_visible=no
+
+set sendmail="/home/gsacre/bin/check_attachment.sh"
+
+hdr_order From: To: Cc: Date:
+
+set use_from
+unset beep
+unset confirmappend
+unset bounce_delivered
+
+auto_view text/x-vcard
+auto_view text/html
+
+# To view meeting requests from Exchange
+alternative_order text/calendar
+auto_view text/calendar

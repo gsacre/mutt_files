@@ -1,0 +1,4 @@
+# $Id: ignores,v 1.10 2000/12/31 17:10:08 seymour Exp $
+#
+ignore *
+unignore from to cc date

@@ -1,0 +1,8 @@
+# $Id: folders,v 1.9 2000/12/31 17:10:08 seymour Exp $
+#
+## Mail folders
+set folder=~/Maildir
+set mailcap_path=~/.mutt/mailcap
+set spoolfile=~/Maildir/Inbox
+set record=~/Maildir/sent
+set postponed=~/Maildir/drafts
