@@ -46,3 +46,4 @@ bind index \cp collapse-thread
 bind editor <tab> complete-query
 
 bind index <F7> limit
+bind index / limit

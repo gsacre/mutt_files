@@ -1,4 +1,4 @@
-mailboxes "+Inbox" "+hr" "+meeting_requests" "+trash" "+spam" "+archive" "+humans" "+follow_up" "+next" "+redmine_ext"
+mailboxes "+Inbox" "+hr" "+meeting_requests" "+trash" "+spam" "+archive" "+humans" "+follow_up" "+next" "+redmine_ext" "+varies"
 set sort=threads
 set sort_aux=reverse-last-date-received
 set beep_new
