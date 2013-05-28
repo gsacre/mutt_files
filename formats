@@ -20,10 +20,13 @@ set folder_format="%N %8s bytes - %d %f"
 #set hdr_format="%3C %Z %[%b %d %H:%M] - %-22.22n %s"
 set pager_format="-%S- [%C/%m] %n (%c) %s"
 #set attribution="Thus wrote %n (%a) [%(%y.%m.%d %H:%M)]:"
-set attribution="%n (%a) wrote:"
+set attribution="On %d, %n (%a) wrote:"
 set status_format="-(%v)--( %f= )%>-( Msgs:%m )-( New:%n )-( Old:%o )-(%P)-"
 #set index_format="%3C. %Z %{%e %b %Y} %30.30n %-35.35t (%4l) %s"
 
 #folder-hook marp-scores 'set index_format="%2N %3C %Z %[%b %d %H:%M] - %s"'
 #folder-hook mozilla 'set index_format="%2N %3C %Z %[%b %d %H:%M] - %s"'
-folder-hook . 'set index_format="%4C %Z  %{[%d/%m/%Y-%H:%M]}  %-17.17F %s"'
+folder-hook . 'set index_format="%4C %Z  %[|%d/%m/%Y-%H:%M|]  %-17.17F %s"'
+#set index_format='%4C %?X?%2X&  ? %Z  %?[1y?%\?[1d\?%[%H:%M]     \&%[%d %b]    \?&%[%d/%m/%Y]?  %-30.30L  %s'
+#folder-hook . 'set index_format="%4C %Z  %{[%d/%m/%Y-%H:%M]}  (%-2.2E) %-17.17F %s"'
+#folder-hook . 'set index_format="%4C %Z  %[[%d/%m/%Y-%H:%M]]  %-17.17F %-17.17t %s %> (%X)"'

@@ -37,3 +37,5 @@ macro index <F9> "<limit>all\n" "show all messages (undo limit)"
 
 # Add a mail as a task
 macro index t "<pipe-message>mutt2task<enter><pipe-message>mess2task<enter>"
+
+macro attach g "<pipe-message>/home/gsacre/bin/vcal2google<enter>"

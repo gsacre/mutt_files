@@ -106,4 +106,4 @@ application/pdf; /usr/bin/evince %s
 application/octet-stream; /usr/bin/xv %s
 
 text/calendar; /home/gsacre/bin/vcal -description -optional -summary -organizer -participant -required -start -end '%s' ; copiousoutput
-text/calendar ; /home/gsacre/bin/icalmutt.rb -i 'mailto:gsa@softkinetic.com' %s
+#text/calendar ; /home/gsacre/bin/icalmutt.rb -i 'mailto:gsa@softkinetic.com' %s
