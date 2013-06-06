@@ -26,7 +26,8 @@ set status_format="-(%v)--( %f= )%>-( Msgs:%m )-( New:%n )-( Old:%o )-(%P)-"
 
 #folder-hook marp-scores 'set index_format="%2N %3C %Z %[%b %d %H:%M] - %s"'
 #folder-hook mozilla 'set index_format="%2N %3C %Z %[%b %d %H:%M] - %s"'
-folder-hook . 'set index_format="%4C %Z  %[|%d/%m/%Y-%H:%M|]  %-17.17F %s"'
+#folder-hook . 'set index_format="%4C %Z  %[|%d/%m/%Y-%H:%M|]  %-17.17F %s"'
+folder-hook . 'set index_format="%3C %Z (%X) %[|%d/%m/%Y-%H:%M|] %-17.17F %s"'
 #set index_format='%4C %?X?%2X&  ? %Z  %?[1y?%\?[1d\?%[%H:%M]     \&%[%d %b]    \?&%[%d/%m/%Y]?  %-30.30L  %s'
 #folder-hook . 'set index_format="%4C %Z  %{[%d/%m/%Y-%H:%M]}  (%-2.2E) %-17.17F %s"'
 #folder-hook . 'set index_format="%4C %Z  %[[%d/%m/%Y-%H:%M]]  %-17.17F %-17.17t %s %> (%X)"'
