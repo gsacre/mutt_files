@@ -37,5 +37,8 @@ macro index <F9> "<limit>all\n" "show all messages (undo limit)"
 
 # Add a mail as a task
 macro index t "<pipe-message>mutt2task<enter><pipe-message>mess2task<enter>"
+macro pager t "<pipe-message>mutt2task<enter><pipe-message>mess2task<enter>"
 
+# Calendar stuff
 macro attach g "<pipe-message>/home/gsacre/bin/vcal2google<enter>"
+macro pager c "<pipe-message>/home/gsacre/bin/parse_remind.pl<enter>"

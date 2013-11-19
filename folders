@@ -4,5 +4,6 @@
 set folder=~/Maildir
 set mailcap_path=~/.mutt/mailcap
 set spoolfile=~/Maildir/Inbox
-set record=~/Maildir/sent
+#set record=~/Maildir/sent
+set record=~/Maildir/Inbox
 set postponed=~/Maildir/drafts
